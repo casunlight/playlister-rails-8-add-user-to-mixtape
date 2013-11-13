@@ -1,0 +1,2 @@
+module Mixtapes::UsersHelper
+end

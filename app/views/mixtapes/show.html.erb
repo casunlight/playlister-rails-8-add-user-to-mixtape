@@ -1,0 +1,21 @@
+<h1><%= @mixtape.name %></h1>
+
+<ol>
+  <%= render @mixtape.songs %>
+</ol>
+
+<h3>Users on this mixtape:</h3>
+<ul>
+  <% @mixtape.users.each do |user| %>
+  <%= user.email %><br>
+  <% end %>
+</ul>
+
+
+
+<p>
+  <%= link_to "Add a Song to This Mixtape", new_mixtape_song_path(@mixtape) %>
+</p>
+<p>
+  <%= link_to "Add a User to This Mixtape", new_mixtape_user_path(@mixtape) %>
+</p>

@@ -1,0 +1,20 @@
+<h1>Listing songs</h1>
+
+<ol>
+  <%# @songs.each do |s| %>
+    <% # Least Abstract %>
+    <%#= render :partial => 'song', :locals => {:song => s} %>
+    <% # A little more abstract %>
+    <%#= render 'song_li', :song => s %>
+    <%#= render s, :as => :s %>
+  <%# end %>
+
+  <%#= render :collection => @songs, :partial => 'song_li' %>
+  <%= render :collection => @songs, :partial => 'song', :as => :song %>
+
+  <%#= render @songs %>
+</ol>
+
+<br>
+
+<%= link_to 'New Song', new_song_path %>
